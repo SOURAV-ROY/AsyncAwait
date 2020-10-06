@@ -1,8 +1,8 @@
 function makeRequest(location) {
     return new Promise((resolve, reject)=>{
         console.log(`Make Request to ${location}`);
-        if(location == 'Google'){
-        // if(location == 'Facebook'){
+        // if(location == 'Google'){
+        if(location == 'Facebook'){
             resolve(`${location} Say Hi`);
         }else{
             reject(`We can only talk to Google`);
@@ -31,7 +31,8 @@ function processRequest(response) {
 async function doWork(){
     try{
 
-    const response = await makeRequest("Google");
+    // const response = await makeRequest("Google");
+    const response = await makeRequest("Facebook");
     console.log('Response Received !!');
     const processResponse = await processRequest(response);
     console.log(processResponse);

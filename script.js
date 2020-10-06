@@ -30,8 +30,8 @@ function processRequest(response) {
 
 async function doWork(){
     try{
-        
-    const response = await makeRequest("Googl");
+
+    const response = await makeRequest("Google");
     console.log('Response Received !!');
     const processResponse = await processRequest(response);
     console.log(processResponse);
